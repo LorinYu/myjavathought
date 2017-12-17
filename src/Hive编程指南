@@ -1,0 +1,12 @@
+第1章 基础知识
+1 hive适合用于构建数据仓库应用，应用不需要快速响应，数据本身不会频繁变化。
+第3章 数据类型与文件格式
+1 集合数据类型 struct map array
+2 create TABLE employees (
+    name  STRING,
+    salary FLOAT,
+    subordinates ARRAY<STRING>,
+    deductions MAP<STRING,FLOAT>,
+    address STRUCT<street:STRING,city:STRING,state:STRING,zip:INT>
+);
+3 文本文件数据分割 \n 换行 ^A 分隔列 ^B 分隔集合数据中的元素 ^C 分割键值对的键与值
